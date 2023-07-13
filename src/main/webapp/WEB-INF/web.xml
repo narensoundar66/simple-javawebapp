@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<web-app version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+    <servlet>
+        <servlet-name>MainApp</servlet-name>
+        <servlet-class>com.vlavik.homework.servlet.MainApp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainApp</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+</web-app>
