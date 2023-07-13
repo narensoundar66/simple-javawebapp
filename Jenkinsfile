@@ -10,19 +10,19 @@ pipeline {
     stage('Build') {
       steps{
           echo "running maven install command"
-          bat 'mvn clean install -DskipTests'
+          bat 'mvn clean package -DskipTests'
       }
     }
     stage('deploy into tomcat') {
       steps{
         echo "Deploying war file into tomcat ..."
-        bat 'mvn tomcat6:deploy'
+        bat 'mvn install tomcat6:deploy'
       }
     }
   }
   post
   {
-    fail{
+    failure{
       echo "build failed"
     }
   }
