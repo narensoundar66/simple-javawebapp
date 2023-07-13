@@ -20,10 +20,23 @@ pipeline
         bat 'mvn install tomcat6:deploy -DskipTests'
       }
     }
+
+      stage('open chrome to display webpage') {
+            steps{
+              echo "Deploying war file into tomcat ..."
+              bat 'mvn install tomcat6:deploy -DskipTests'
+            }
+      }
+
+      stage('open chrome to display webpage') {
+                  steps{
+                    echo "opening chrome to display site"
+                    bat 'start chrome http://localhost:8081/simple/'
+                  }
+            }
   }
      post
      {
-            // Clean after build
             always
             {
                 cleanWs(cleanWhenNotBuilt: false,
