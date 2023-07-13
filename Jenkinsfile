@@ -20,8 +20,6 @@ pipeline {
       }
     }
   }
-  post
-  {
      post {
             // Clean after build
             always {
