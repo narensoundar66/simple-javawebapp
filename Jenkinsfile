@@ -1,4 +1,5 @@
-pipeline {
+pipeline
+{
   agent any
   stages {
     stage('Git repo clone')
@@ -20,9 +21,11 @@ pipeline {
       }
     }
   }
-     post {
+     post
+     {
             // Clean after build
-            always {
+            always
+            {
                 cleanWs(cleanWhenNotBuilt: false,
                         deleteDirs: true,
                         disableDeferredWipeout: true,
@@ -31,5 +34,4 @@ pipeline {
                                    [pattern: '.propsfile', type: 'EXCLUDE']])
             }
     }
-  }
-}
+ }
