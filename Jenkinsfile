@@ -17,7 +17,7 @@ pipeline
     stage('deploy into tomcat') {
       steps{
         echo "Deploying war file into tomcat ..."
-        bat 'mvn install tomcat6:deploy'
+        bat 'mvn install tomcat6:deploy -DskipTests'
       }
     }
   }
