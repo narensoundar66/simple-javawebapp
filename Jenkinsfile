@@ -24,7 +24,7 @@ pipeline
       stage('open chrome to display webpage') {
                   steps{
                     echo "opening chrome to display site"
-                    def driver = new org.openqa.selenium.chrome.ChromeDriver(new org.openqa.selenium.chrome.ChromeOptions().setBinary("E:\chromedriver"))
+                    def driver = new org.openqa.selenium.chrome.ChromeDriver(new org.openqa.selenium.chrome.ChromeOptions().setBinary("E:/chromedriver"))
 
 
                             bat 'chromedriver --port=4444 --url-base=/wd/hub'
