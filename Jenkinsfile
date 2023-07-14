@@ -24,7 +24,7 @@ pipeline
       stage('open chrome to display webpage') {
                   steps{
                     echo "opening chrome to display site"
-                            bat 'chromedriver --port=4444 --url-base=/wd/hub
+                            bat 'chromedriver --port=4444 --url-base=/wd/hub'
 
                             script {
                                         def driver = new ChromeDriver()
