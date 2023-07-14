@@ -30,7 +30,6 @@ pipeline
                             bat 'chromedriver --port=4444 --url-base=/wd/hub'
 
                             script {
-
                                         driver.get("http://localhost:8081/simple/")
                                     }
                   }
