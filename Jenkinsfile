@@ -16,7 +16,7 @@ pipeline
     steps
     {
 
-       buildNaren(value1, value2)
+       buildNaren(${value1}, ${value2})
     }
     }
    /* stage('Build') {
