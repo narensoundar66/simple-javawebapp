@@ -16,7 +16,7 @@ pipeline
        helloNaren()
     }
     }
-    stage('Build') {
+   /* stage('Build') {
       steps{
           echo "running maven install command"
           bat 'mvn clean package -DskipTests'
@@ -42,4 +42,5 @@ pipeline
                                    [pattern: '.propsfile', type: 'EXCLUDE']])
             }
     }
+  */
  }
