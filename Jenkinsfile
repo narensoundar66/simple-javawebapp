@@ -1,4 +1,4 @@
-@Library(narenshared) _
+@Library("narenshared") _
 pipeline
 {
   agent any
