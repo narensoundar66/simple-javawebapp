@@ -8,7 +8,7 @@ def call(input)
  {
   echo "doing addition"
   int inputint = input.toInteger()    //converting input to integer for adding
-  int ans = inputint + 6       // can we use 6 explicitly
+  int ans = inputint + int 6       // can we use 6 explicitly
   echo "${ans}"
  }
 }
