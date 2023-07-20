@@ -13,7 +13,7 @@ pipeline
     {
     steps
     {
-      def value="6"
+      def value= "6"
        buildNaren(var1: value)
     }
     }
