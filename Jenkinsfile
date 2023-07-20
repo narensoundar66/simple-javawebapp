@@ -13,7 +13,7 @@ pipeline
     {
     steps
     {
-       helloNaren()
+       buildNaren()
     }
     }
    /* stage('Build') {
