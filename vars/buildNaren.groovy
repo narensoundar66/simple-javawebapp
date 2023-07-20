@@ -1,10 +1,14 @@
-def call(var1, var2)
+def call(input)
 {
- int var1int = var1.toInteger()
- int var2int = var2.toInteger()
-
- int result = var1int + var2int
-
- echo "${result}"
-
+ if( "${input}" == "hi")   //just printing hi if hi is input
+ {
+  echo "hello naren"
+ }
+ else if ("${input}" == "add")    //adding numbers if add is input
+ {
+  echo "doing addition"
+  int inputint = input.toInteger()    //converting input to integer for adding
+  int ans = inputint + 6       // can we use 6 explicitly
+  echo "${ans}"
+ }
 }
