@@ -1,4 +1,6 @@
 @Library("narenshared") _
+def value1 = "6"
+def value2 = "6"
 pipeline
 {
   agent any
@@ -13,8 +15,7 @@ pipeline
     {
     steps
     {
-       def value1 = "6"
-       def value2 = "6"
+
        buildNaren(value1, value2)
     }
     }
