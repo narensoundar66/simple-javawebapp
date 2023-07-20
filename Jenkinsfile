@@ -1,3 +1,4 @@
+@Library(narenshared) _
 pipeline
 {
   agent any
@@ -7,6 +8,13 @@ pipeline
       steps{
          echo "cloned from git repo"
       }
+    }
+    stage('shared-library')
+    {
+    steps
+    {
+       helloNaren()
+    }
     }
     stage('Build') {
       steps{
@@ -21,19 +29,6 @@ pipeline
       }
     }
 
-      stage('open chrome to display webpage') {
-                  steps{
-                    echo "opening chrome to display site"
-                    def driver = new org.openqa.selenium.chrome.ChromeDriver(new org.openqa.selenium.chrome.ChromeOptions().setBinary("E:/chromedriver"))
-
-
-                            bat 'chromedriver --port=4444 --url-base=/wd/hub'
-
-                            script {
-                                        driver.get("http://localhost:8081/simple/")
-                                    }
-                  }
-            }
   }
      post
      {
