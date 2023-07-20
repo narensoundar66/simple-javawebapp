@@ -1,5 +1,5 @@
 @Library("narenshared") _
-def value1 = "hi"
+def value1 = "add"
 pipeline
 {
   agent any
