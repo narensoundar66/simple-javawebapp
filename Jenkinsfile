@@ -15,7 +15,7 @@ pipeline
     {
       // def value= "6"
 
-       buildNaren(var1: "6", var2: "2")
+       buildNaren("6", "2")
     }
     }
    /* stage('Build') {
